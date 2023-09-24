@@ -12,7 +12,34 @@ To run the basic server, you'll need to install a few requirements. To do this, 
 pip install -r requirements.txt
 ```
 
-This will install only the dependencies required to run the server. To boot up the 
+This will install only the dependencies required to run the server. To use sample dataset you can use the
+dvdrental data dump for postgres. 
+Create a database in postgres db
+
+```bash
+CREATE DATABASE dvdrental;
+```
+
+Finally, enter the exit command to quit psql:
+```bash
+postgres=# exit
+```
+
+For Windows you can use the following command to restore the dataset
+
+Navigate the bin folder of the PostgreSQL installation folder:
+
+```bash
+cd C:\Program Files\PostgreSQL\16\bin
+```
+
+After that, use the pg_restore tool to load data into the dvdrental database:
+
+```bash
+pg_restore -U postgres -d dvdrental C:\sampledb\dvdrental.tar
+```
+
+To boot up the 
 default server, you can run:
 
 ```bash
