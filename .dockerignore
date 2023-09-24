@@ -2,3 +2,4 @@
 .DJANGO_SECRET_KEY
 */__pycache__
 *__pycache__
+*/migrations

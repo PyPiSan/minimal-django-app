@@ -1,5 +1,6 @@
 
 from pathlib import Path
+import os
 from django.core.management.commands.runserver import Command as runserver
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -13,21 +14,23 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-=kfh60mu^jpg9c69mml0_8w(sa!9p1*t(vz9#ef@ki*vl5+18z'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# Change it to True if in debug mode
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['0.0.0.0', '127.0.0.1']
 
 
 # Application definition
 
 INSTALLED_APPS = [
-    'app.apps.AppConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # My Applications
+    'home',
 ]
 
 MIDDLEWARE = [
@@ -40,12 +43,12 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'api.urls'
+ROOT_URLCONF = 'app.urls'
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR, os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -58,7 +61,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'api.wsgi.application'
+WSGI_APPLICATION = 'app.wsgi.application'
 
 
 # Database
