@@ -15,7 +15,7 @@ SECRET_KEY = 'django-insecure-=kfh60mu^jpg9c69mml0_8w(sa!9p1*t(vz9#ef@ki*vl5+18z
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # Change it to True if in debug mode
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['0.0.0.0', '127.0.0.1']
 
@@ -31,7 +31,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # My Applications
     'home',
-    'apis',
 ]
 
 MIDDLEWARE = [
@@ -68,17 +67,17 @@ WSGI_APPLICATION = 'app.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-# Using MongoDb
-'''DATABASES = {
+
+DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'dvdrental',
         'USER':'postgres',
-        'PASSWORD':'postgres'
-        'HOST': '0.0.0.0',
+        'PASSWORD':'postgres',
+        'HOST': '127.0.0.1',
         'PORT': '5432',
     }
-}'''
+}
 
 
 # Password validation

@@ -7,3 +7,4 @@ from django.http import HttpResponse
 # default home view
 def homepage(request, *args, **kwargs):
     return render(request, 'home.html')
+
