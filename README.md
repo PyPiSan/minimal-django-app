@@ -29,7 +29,7 @@ purposes only].
 You should now be able to send:
 
 ```bash
-curl localhost:8000/health
+curl localhost:5000/health
 ```
 
 And receive the response `OK` and status code `200`.
@@ -47,7 +47,7 @@ docker build . -t django-app
 To launch the containerised app, run:
 
 ```bash
-docker run -p 8000:8000 django-app
+docker run -p 5000:5000 django-app
 ```
 
 You should see your server boot up, and should be accessible as before.
