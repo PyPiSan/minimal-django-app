@@ -69,8 +69,10 @@ WSGI_APPLICATION = 'api.wsgi.application'
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'dvdrental',
+        'USER':'postgres',
+        'PASSWORD':'postgres'
         'HOST': '0.0.0.0',
-        'PORT': ''
+        'PORT': '5432',
     }
 }'''
 
