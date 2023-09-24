@@ -39,6 +39,8 @@ After that, use the pg_restore tool to load data into the dvdrental database:
 pg_restore -U postgres -d dvdrental C:\sampledb\dvdrental.tar
 ```
 
+The dvdrental database structure is in files folder.
+
 To boot up the 
 default server, you can run:
 
