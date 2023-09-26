@@ -27,7 +27,9 @@ class MovieList(APIView):
             serialized_data = FilmSerializers(data)
             output.append(serialized_data.data)
         return Response(output)
-    
+
+class MovieSearch(APIView):
+    renderer_classes = [CustomRenderer]  
     def post(self, request):
         if not request.data:
             return Response({"success":False})
