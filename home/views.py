@@ -34,7 +34,8 @@ class MovieSearch(APIView):
         if not request.data:
             return Response({"success":False})
         movie_name = request.data.get('movie',"")
-        queryset = Film.objects.filter(title__contains=movie_name)
+        queryset1 = Rental.objects.all()
+        queryset = Film.objects.filter(title__icontains=movie_name)
         output = []
         if len(queryset) >= 1:
             for data in queryset:

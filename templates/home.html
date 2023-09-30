@@ -1,8 +1,14 @@
+{% load static %}
 <!DOCTYPE html>
 <head>
+    <title>Django APP</title>
+    <link href="{%static 'css/home.css'%}" rel="stylesheet" type="text/css"/>
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+
     <body>
         <div>
-            Hello world
+            <centre><dotlottie-player src="https://lottie.host/0c803990-70e2-4f26-a65e-e0ea33444188/G2fwUILD5L.json" background="transparent" speed="1" style="width: 400px; height: 400px;" loop autoplay></dotlottie-player></centre>
         </div>
     </body>
+    
 </head>
