@@ -1,0 +1,28 @@
+version: '3.7'
+
+networks:
+  mydjango:
+    external: false
+
+services:
+
+  mydjango:
+      image: djano-test:latest
+      ports:
+        - '8000:5000'
+      deploy:
+        replicas: 2
+        update_config:
+          parallelism: 2
+          order: start-first
+          failure_action: rollback
+          delay: 10s
+        rollback_config:
+          parallelism: 0
+          order: stop-first
+        restart_policy:
+          condition: any
+          delay: 5s
+          window: 120s
+      networks:
+        - mydjango
