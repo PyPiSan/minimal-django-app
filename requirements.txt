@@ -1,5 +1,5 @@
 dnspython==2.4.2
-django==4.2.15
+django==4.2.17
 djangorestframework==3.14.0
 pymongo==4.5.0
 psycopg2-binary==2.9.7
